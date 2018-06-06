@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{57EB0321-040D-4027-8ECF-3279CBF2B591}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>asmCycleCount</RootNamespace>
+    <AssemblyName>asmCycleCount</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="asmCycleCount, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_bin\asmCycleCount.exe</HintPath>
+    </Reference>
+    <Reference Include="ScintillaNET, Version=2.6.0.0, Culture=neutral, PublicKeyToken=948d6c9751444115, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ScintillaNET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddSub.cs" />
+    <Compile Include="AndOr.cs" />
+    <Compile Include="AndOrEorCCRorSR.cs" />
+    <Compile Include="ArgAbsoluteLong.cs" />
+    <Compile Include="ArgAbsoluteShort.cs" />
+    <Compile Include="ArgAddressDirect.cs" />
+    <Compile Include="ArgAddressIndirect.cs" />
+    <Compile Include="ArgAddressIndirectWithIndex.cs" />
+    <Compile Include="ArgAddressIndirectWithOffset.cs" />
+    <Compile Include="ArgAddressIndirectWithPostIncrement.cs" />
+    <Compile Include="ArgAddressIndirectWithPreDecrement.cs" />
+    <Compile Include="ArgCCR.cs" />
+    <Compile Include="ArgDataDirect.cs" />
+    <Compile Include="ArgEnum.cs" />
+    <Compile Include="ArgImmediateValue.cs" />
+    <Compile Include="ArgLable.cs" />
+    <Compile Include="ArgMovemReg.cs" />
+    <Compile Include="ArgPCRelativeWithIndex.cs" />
+    <Compile Include="ArgPCRelativeWithOffset.cs" />
+    <Compile Include="ArgSR.cs" />
+    <Compile Include="ArgumentPart.cs" />
+    <Compile Include="ArgUSP.cs" />
+    <Compile Include="ASbcd.cs" />
+    <Compile Include="ASddx.cs" />
+    <Compile Include="Bcc.cs" />
+    <Compile Include="Bit.cs" />
+    <Compile Include="BitShift.cs" />
+    <Compile Include="Chk.cs" />
+    <Compile Include="Clr.cs" />
+    <Compile Include="Cmp.cs" />
+    <Compile Include="Cmpm.cs" />
+    <Compile Include="Comment.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="Dbcc.cs" />
+    <Compile Include="Exg.cs" />
+    <Compile Include="Ext.cs" />
+    <Compile Include="GenericInstruction.cs" />
+    <Compile Include="Illegal.cs" />
+    <Compile Include="Instruction.cs" />
+    <Compile Include="Jump.cs" />
+    <Compile Include="Lable.cs" />
+    <Compile Include="Lea.cs" />
+    <Compile Include="Link.cs" />
+    <Compile Include="Move.cs" />
+    <Compile Include="Movem.cs" />
+    <Compile Include="MoveP.cs" />
+    <Compile Include="Moveq.cs" />
+    <Compile Include="MoveToCCRSRUSP.cs" />
+    <Compile Include="MulDiv.cs" />
+    <Compile Include="Nbcd.cs" />
+    <Compile Include="Nop.cs" />
+    <Compile Include="NullInstruction.cs" />
+    <Compile Include="OverWriteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OverWriteForm.Designer.cs">
+      <DependentUpon>OverWriteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pea.cs" />
+    <Compile Include="Reset.cs" />
+    <Compile Include="Rtx.cs" />
+    <Compile Include="SAddq.cs" />
+    <Compile Include="Scc.cs" />
+    <Compile Include="Stop.cs" />
+    <Compile Include="Swap.cs" />
+    <Compile Include="Tas.cs" />
+    <Compile Include="Trap.cs" />
+    <Compile Include="Trapv.cs" />
+    <Compile Include="Tst.cs" />
+    <Compile Include="Unlink.cs" />
+    <Compile Include="Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window.Designer.cs">
+      <DependentUpon>Window.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Xor.cs" />
+    <EmbeddedResource Include="OverWriteForm.resx">
+      <DependentUpon>OverWriteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window.resx">
+      <DependentUpon>Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
